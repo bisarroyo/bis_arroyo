@@ -14,17 +14,17 @@ class Header extends Component {
             </Link>
           </li>
           <li className='navbar-item'>
-            <Link to='/'>
+            <Link to='/blog'>
               Blog
             </Link>
           </li>
           <li className='navbar-item'>
-            <Link to='/'>
-              Curriculum
+            <Link to='/cv'>
+              CV
             </Link>
           </li>
           <li className='navbar-item'>
-            <Link to='/'>
+            <Link to='/contact'>
               Contact
             </Link>
           </li>
