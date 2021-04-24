@@ -1,0 +1,22 @@
+header {
+  background-color: #000;
+  height: 40px;
+}
+.navbar {
+  display: flex;
+}
+.navbar-item {
+  list-style: none;
+  color: #fff;
+  margin: 10px 0px 0px 20px;
+  font-size: 1.8rem;
+  cursor: pointer;
+  border-bottom: solid 2px transparent;
+  transition: 0.5s;
+}
+.navbar-item:hover {
+  border-bottom: solid 2px #fff;
+}
+a {
+  color: #fff;
+}
