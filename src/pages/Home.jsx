@@ -1,10 +1,18 @@
 import React, { Component } from 'react';
+import Presentation from '../components/Presentation/Presentation';
+import Social from '../components/Social/Social';
+import ContactForm from '../components/Form/Form';
+
+import GlobalStyle from '../styles/GlobalStyle';
 
 class Home extends Component {
   render() {
     return (
       <div>
-        <h1>Hola</h1>
+        <GlobalStyle />
+        <Presentation />
+        <Social />
+        <ContactForm />
       </div>
     );
   }

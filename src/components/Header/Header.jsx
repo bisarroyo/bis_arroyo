@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-
-import '../assets/styles/components/Header.scss';
+import Style from './Styles';
 
 class Header extends Component {
   render() {
     return (
-      <header>
+      <Style>
         <ul className='navbar'>
           <li className='navbar-item'>
             <Link to='/'>
@@ -29,7 +28,7 @@ class Header extends Component {
             </Link>
           </li>
         </ul>
-      </header>
+      </Style>
     );
   }
 }
