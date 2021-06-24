@@ -1,10 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 import Styles from './Styles';
 
-export const ContactForm = (props) => {
+export const ContactForm = () => {
+  const [form, setForm] = useState({ fullName: '', email: '', message: '' });
+
   const handleSubmit = (event) => {
     event.preventDefault();
+    emailjs.send('service_drvuqj9', 'template_4do2mlk', form, 'user_6jm6KpxJVyCrP322EtqhO')
+      .then((result) => {
+        console.log(result.text);
+        setForm({ fullName: '', email: '', message: '' });
+      }, (error) => {
+        console.log(error.text);
+      });
   };
+
+  const handleChange = (event) => {
+    setForm({ ...form, [event.target.name]: event.target.value });
+  };
+
+  const handleClick = () => {
+    console.log('boton clickeado');
+  };
+
   return (
     <Styles>
       <form action="" onSubmit={handleSubmit}>
@@ -16,8 +35,8 @@ export const ContactForm = (props) => {
           id='fullName'
           placeholder='Full name'
           maxLength='50'
-          // onChange={}
-          // value={}
+          onChange={handleChange}
+          value={form.fullName}
         />
         <label htmlFor='name'></label>
         <input
@@ -26,8 +45,8 @@ export const ContactForm = (props) => {
           id='email'
           placeholder='Email'
           maxLength='50'
-          // onChange={}
-          // value={}
+          onChange={handleChange}
+          value={form.email}
         />
         <label htmlFor='message'></label>
         <textarea
@@ -38,10 +57,10 @@ export const ContactForm = (props) => {
           maxLength='200'
           cols='40'
           rows='10'
-          // onChange={}
-          // value={}
+          onChange={handleChange}
+          value={form.message}
         />
-        <button type='button'>Send</button>
+        <button type='submit' onClick={handleClick}>Send</button>
       </form>
     </Styles>
   );

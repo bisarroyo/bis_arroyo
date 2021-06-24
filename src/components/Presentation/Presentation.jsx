@@ -10,7 +10,11 @@ export default function Presentation() {
         <img src={profile} alt='Bismark Arroyo Bermúdez' />
       </div>
       <div>
-        <h2>Bismark Arroyo</h2>
+        <h2>
+          Hi! My name is
+          {' '}
+          <strong>Bismark Arroyo</strong>
+        </h2>
         <p>
           Self-taught person and web developer implementing variety of frameworks y libraries for build projects with high quality and scalable.
         </p>
