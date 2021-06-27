@@ -2,19 +2,17 @@ import React, { Component } from 'react';
 import Presentation from '../components/Presentation/Presentation';
 import Social from '../components/Social/Social';
 import ContactForm from '../components/Form/Form';
-import ContainerItem from '../components/ContainerItem/ContainerItem';
-
-import GlobalStyle from '../styles/GlobalStyle';
+import ContainerProjects from '../components/ContainerProjects/ContainerProjects';
+import ContainerSkills from '../components/ContainerSkills/ContainerSkills';
 
 class Home extends Component {
   render() {
     return (
       <div>
-        <GlobalStyle />
         <Presentation />
-        <ContainerItem title='Projects' />
-        <Social />
-        <ContainerItem title='Skills' />
+        <ContainerProjects title='Projects' />
+        <Social title='Social' />
+        <ContainerSkills title='Skills' />
         <ContactForm />
       </div>
     );

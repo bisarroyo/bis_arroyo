@@ -1,7 +1,7 @@
 import React from 'react';
 import StylesItem from './Styles';
 
-export const Item = (props) => {
+const Item = (props) => {
   const { image, title, url } = props;
   return (
     <StylesItem>
@@ -9,7 +9,7 @@ export const Item = (props) => {
         <div className='projects-image'>
           <img src={image} alt='' />
         </div>
-        <div className='projects-title'>{title}</div>
+        <div className='projects-title'><strong>{title}</strong></div>
         <div className='projects-link'>
           <a href={url} target='_blank'>Link</a>
         </div>

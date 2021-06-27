@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
   }
   body {
     font-size: 62.5%;
+    color: #745B9E;
   }
 `;
 

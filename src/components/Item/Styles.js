@@ -9,6 +9,9 @@ const Styles = styled.div`
     .projects-image {
       height: 100px;
       margin-bottom: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       img {
         width: 100%;
       }

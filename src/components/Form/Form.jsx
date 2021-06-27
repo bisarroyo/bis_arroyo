@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import Styles from './Styles';
 
-export const ContactForm = () => {
+const ContactForm = () => {
   const [form, setForm] = useState({ fullName: '', email: '', message: '' });
 
   const handleSubmit = (event) => {
@@ -25,7 +25,7 @@ export const ContactForm = () => {
   };
 
   return (
-    <Styles>
+    <Styles id='contact'>
       <form action="" onSubmit={handleSubmit}>
         <h2>Contact me</h2>
         <label htmlFor='fullName'></label>

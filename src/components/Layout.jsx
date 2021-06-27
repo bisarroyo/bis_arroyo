@@ -1,11 +1,13 @@
 import React from 'react';
 
-import Header from './Header/Header';
+import Navbar from './Navbar/Navbar/Navbar';
 import Footer from './Footer/Footer';
+import GlobalStyle from '../styles/GlobalStyle';
 
 const Layout = (props) => (
   <>
-    <Header />
+    <GlobalStyle />
+    <Navbar />
     {props.children}
     <Footer />
   </>

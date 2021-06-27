@@ -4,11 +4,11 @@ import { connect } from 'react-redux';
 import Styles from './Styles';
 import Item from '../Item/Item';
 
-const ContainerItem = (props) => {
+const ContainerProjcts = (props) => {
   const { title } = props;
   console.log(props.projects.pages);
   return (
-    <Styles>
+    <Styles id='projects'>
       <h1>{title}</h1>
       <div className='projects-main-container'>
         {props.projects.pages.map(item => (
@@ -16,7 +16,7 @@ const ContainerItem = (props) => {
             key={item.id}
             image={item.image}
             title={item.name}
-            url={item.image}
+            url={item.url}
           />
         ))}
       </div>
@@ -25,8 +25,8 @@ const ContainerItem = (props) => {
 };
 
 const mapStateToProps = (state) => {
-  const item = state.initialState;
+  const item = state;
   return { projects: item };
 };
 
-export default connect(mapStateToProps, null)(ContainerItem);
+export default connect(mapStateToProps, null)(ContainerProjcts);
